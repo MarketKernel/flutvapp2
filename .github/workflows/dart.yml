@@ -1,17 +1,8 @@
-name: Publish to Pub.dev
+name: Publish to pub.dev
 
-on: push
+on:
+  push
 
 jobs:
-  publishing:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@main # required!
-        
-      - name: 'flutvapp2'
-        uses: k-paxian/dart-package-publisher@master
-        with:
-          accessToken: ${{ secrets.OAUTH_ACCESS_TOKEN }}
-          refreshToken: ${{ secrets.OAUTH_REFRESH_TOKEN }}
-          force: true
+  publish:
+    uses: dart-lang/setup-dart/.github/workflows/publish.yml@v1
