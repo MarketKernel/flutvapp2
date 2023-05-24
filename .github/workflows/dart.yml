@@ -20,8 +20,5 @@ jobs:
     - name: Get packages
       run: flutter pub get
 
-    - name: Build package
-      run: flutter pub publish --dry-run
-
     - name: Publish package
       run: flutter pub publish
