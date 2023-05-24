@@ -24,3 +24,5 @@ jobs:
 
     - name: Publish package
       run: flutter pub publish -f
+      env:
+          PUB_TOKEN: ${{ secrets.PUB_DEV_TOKEN }}
